@@ -55,3 +55,17 @@ module.exports = (sequelize, DataTypes) => {
 
   return patient;
 };
+
+// const response = await fetch("http://localhost:3000/api/patient", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(data),
+        // });
+
+        // if (!response.ok) {
+        //     throw new Error("Failed to create patient");
+        // }
+
+        // return response.json();

@@ -3,12 +3,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./models");
 const patientRoutes = require("./routes/patient.route");
+const morgan = require("morgan");
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan("dev"));
 
 db.sequelize
   .authenticate()
