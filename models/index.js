@@ -18,7 +18,7 @@ db.sequelize = sequelize;
 
 // Import models here
 db.patient = require("./patient.js")(sequelize, Sequelize);
-db.Slot = require("./slot")(sequelize, Sequelize);
+db.slot = require("./slot")(sequelize, Sequelize);
 db.Appointment = require("./appointment")(sequelize, Sequelize);
 
 module.exports = db;

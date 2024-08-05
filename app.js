@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./models");
 const patientRoutes = require("./routes/patient.route");
+const appointmentRoutes = require("./routes/appointment.route");
 const morgan = require("morgan");
 const cors = require("cors");
 
@@ -26,6 +27,7 @@ db.sequelize
 db.sequelize.sync();
 
 app.use("/api/patient", patientRoutes);
+app.use("/api/appointment", appointmentRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

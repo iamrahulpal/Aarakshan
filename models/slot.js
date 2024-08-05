@@ -1,6 +1,6 @@
 // models/slot.js
 module.exports = (sequelize, DataTypes) => {
-  const Slot = sequelize.define(
+  const slot = sequelize.define(
     "slot",
     {
       id: {
@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TIME,
         allowNull: false,
       },
-      isAvailable: {
+      is_available: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: true,
@@ -27,5 +27,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return Slot;
+  return slot;
 };
