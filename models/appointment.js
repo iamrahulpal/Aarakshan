@@ -1,6 +1,6 @@
 // models/appointment.js
 module.exports = (sequelize, DataTypes) => {
-    const Appointment = sequelize.define(
+    const appointment = sequelize.define(
       "appointment",
       {
         id: {
@@ -42,17 +42,17 @@ module.exports = (sequelize, DataTypes) => {
       }
     );
   
-    Appointment.associate = (models) => {
-      Appointment.belongsTo(models.Patient, {
+    appointment.associate = (models) => {
+      appointment.belongsTo(models.Patient, {
         foreignKey: 'patient_id',
         as: 'patient',
       });
-      Appointment.belongsTo(models.Slot, {
+      appointment.belongsTo(models.Slot, {
         foreignKey: 'slot_id',
         as: 'slot',
       });
     };
   
-    return Appointment;
+    return appointment;
   };
   
